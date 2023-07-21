@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "@wordpress/e2e-test-utils": "^9.5.0",
+    "@wordpress/env": "^5.13.0",
+    "@wordpress/scripts": "^25.5.1",
+    "copy-webpack-plugin": "^11.0.0"
+  },
+  "scripts": {
+    "start": "wp-scripts start --webpack-copy-php --webpack-src-dir=admin/blocks --output-path=build/blocks",
+    "start:admin": "wp-scripts start --webpack-src-dir=admin/assets --output-path=build/admin",
+    "start:admin-bookmaker": "wp-scripts start --webpack-src-dir=admin/assets/bookmaker-admin --output-path=build/bookmaker-admin",
+    "start:admin-styles-page": "wp-scripts start --webpack-src-dir=admin/assets/style-settings-admin --output-path=build/style-settings-admin",
+    "build": "wp-scripts build --webpack-copy-php --webpack-src-dir=admin/blocks --output-path=build/blocks",
+    "build:admin": "wp-scripts build --webpack-src-dir=admin/assets --output-path=build/admin",
+    "build:admin-bookmaker": "wp-scripts build --webpack-src-dir=admin/assets/bookmaker-admin --output-path=build/bookmaker-admin",
+    "build:admin-styles-page": "wp-scripts build --webpack-src-dir=admin/assets/style-settings-admin --output-path=build/style-settings-admin",
+    "build:copy-php": "wp-scripts build --webpack-copy-php",
+    "build:all": "npm run build && npm run build:admin && npm run build:admin-bookmaker && npm run build:admin-styles-page"
+  },
+  "dependencies": {
+    "@eastdesire/jscolor": "^2.5.1"
+  }
+}
